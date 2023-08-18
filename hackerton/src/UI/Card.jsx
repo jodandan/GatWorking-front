@@ -341,7 +341,7 @@ export default function Card() {
           <Link to="/Card"  >명함</Link>
         </Register>
         <Login>
-          <Link to="/login"  >선택의 시간</Link>
+          <Link to="/Selcet"  >선택의 시간</Link>
         </Login>
       </Header>
       <Border />

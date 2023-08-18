@@ -4,7 +4,7 @@ import { Link ,Route, Routes } from "react-router-dom"; // Import Link component
 
 
 import CardComponent from "../Page/CardComponent";
-import LoginComponent from "../Page/SelcetComponent";
+import SelcetComponent from "../Page/SelcetComponent";
 
 import FisrtAppleWatchUI from "./FisrtAppleWatchUI";
 import SecondAppleWatchUI from "./SecondAppleWatchUI";
@@ -227,7 +227,7 @@ function Main() {
       <>
         <Routes>
           <Route path="/Card" element={<CardComponent />} />
-          <Route path="/login" element={<LoginComponent />} />
+          <Route path="/Selcet" element={<SelcetComponent />} />
         </Routes>
         <Header>
           <Logo>
@@ -240,7 +240,7 @@ function Main() {
             <Link to="/Card">명함</Link>
           </Register>
           <LoginCss>
-            <Link to="/login">선택의 시간</Link>
+            <Link to="/Selcet">선택의 시간</Link>
           </LoginCss>
         </Header>
         <Border/>
