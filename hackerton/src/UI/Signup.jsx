@@ -388,9 +388,10 @@ const LastSubmitBtn = styled.div`
 
 
 const SignUp = () => {
+  const [Id , setId ] = useState('');
   const [nickname, setNickname] = useState('');
   const [password, setPassword] = useState('');
-  const [shopName, setShopName] = useState('');
+  const [studentId, setStudentId] = useState('');
   const [introductionLinks, setIntroductionLinks] = useState([]);
   const [projects, setProjects] = useState([]);
   const [ShowProjectModal ,setShowProjectModal] = useState('');
@@ -470,13 +471,24 @@ const SignUp = () => {
         </LeftBox>
         <RightBox>
           <Title>
-            아이디
+            이름
           </Title>
 
           <FormInput
             type="text"
-            name="nickname"
-            onChange={(e) => setNickname(e.target.value)}
+            name="Id"
+            onChange={(e) => setId(e.target.value)}
+            required
+          />
+          
+          <Title>
+            학번
+          </Title>
+          <FormInput
+            type="text"
+            name="studentId"
+
+            onChange={(e) => setStudentId(e.target.value)}
             required
           />
 
@@ -485,20 +497,20 @@ const SignUp = () => {
           </Title>
           <FormInput
             type="text"
-            name="nickname"
+            name="studentId"
 
-            onChange={(e) => setNickname(e.target.value)}
+            onChange={(e) => setStudentId(e.target.value)}
             required
           />
 
           <Title>
-            학번
+            역할
           </Title>
           <FormInput
             type="text"
-            name="nickname"
+            name="studentId"
 
-            onChange={(e) => setNickname(e.target.value)}
+            onChange={(e) => setStudentId(e.target.value)}
             required
           />
 
@@ -507,9 +519,9 @@ const SignUp = () => {
           </Title>
           <FormInput
             type="text"
-            name="nickname"
+            name="Id"
 
-            onChange={(e) => setNickname(e.target.value)}
+            onChange={(e) => setId(e.target.value)}
             required
           />
 
@@ -524,6 +536,19 @@ const SignUp = () => {
             onChange={(e) => setNickname(e.target.value)}
             required
           />
+
+          
+          <Title>
+            카카오 ID
+          </Title>
+          <FormInput
+            type="text"
+            name="studentId"
+
+            onChange={(e) => setStudentId(e.target.value)}
+            required
+          />
+
         </RightBox>
         {/* {/* <SubmitBtn onClick={handleSignUp} value="회원가입하기">
           회원가입하기
