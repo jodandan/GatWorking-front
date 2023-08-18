@@ -7,6 +7,10 @@ import CardComponent from "./Page/CardComponent";
 import SelcetComponent from "./Page/SelcetComponent";
 import LoginComponent from "./Page/LoginComponent";
 import SignupComponent from "./Page/SignupComponent";
+import HakertonCategoryComponent from "./Page/HakertonCategoryComponent";
+import ProjectCategoryComponent from "./Page/ProjectCategoryComponent";
+import ContestCategoryComponent from "./Page/ContestCategoryComponent";
+
 
 
 
@@ -20,6 +24,9 @@ function App() {
         <Route path="/Selcet" element={<SelcetComponent />} />
         <Route path="/Login" element={<LoginComponent />} />
         <Route path="/Signup" element={<SignupComponent />} />
+        <Route path="/HakertonCategory" element={<HakertonCategoryComponent />} />
+        <Route path="/ProjectCategory" element={<ProjectCategoryComponent />} />
+        <Route path="/ContestCategory" element={<ContestCategoryComponent />} />
       </Routes> 
    
     </>

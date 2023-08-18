@@ -4,12 +4,8 @@ import { Link ,Route, Routes } from "react-router-dom"; // Import Link component
 
 
 import CardComponent from "../Page/CardComponent";
-import LoginComponent from "../Page/SelcetComponent";
 import SelcetComponent from "../Page/SelcetComponent";
-import HakertonCategoryComponent from "../Page/HakertonCategoryComponent";
-import ProjectCategoryComponent from "../Page/ProjectCategoryComponent";
-import ContestCategoryComponent from "../Page/ContestCategoryComponent";
-
+import HakertonCategoryComponent from "../Page/HakertonCategoryComponent"
 
 import FisrtAppleWatchUI from "./FisrtAppleWatchUI";
 import SecondAppleWatchUI from "./SecondAppleWatchUI";
@@ -179,7 +175,7 @@ const Title = styled.div`
   font-weight: 700;
   line-height: normal;
   margin-top: 4rem;
-  margin-left: 3rem;
+  margin-left: 4rem;
 `;
 
 const Picture = styled.div`
@@ -257,16 +253,14 @@ const CategotyText = styled.div`
   a:hover { color: black; text-decoration: underline;}
 
 `;
-function Main() {
+
+export default function ContestCategory() {
     return (
       <>
         <Routes>
           <Route path="/Card" element={<CardComponent />} />
-          <Route path="/login" element={<LoginComponent />} />
           <Route path="/Selcet" element={<SelcetComponent />} />
           <Route path="/HakertonCategory" element={<HakertonCategoryComponent />} />
-          <Route path="/ProjectCategory" element={<ProjectCategoryComponent />} />
-          <Route path="/ContestCategory" element={<ContestCategoryComponent />} />
         </Routes>
         <Header>
           <Logo>
@@ -284,59 +278,31 @@ function Main() {
         </Header>
         <Border/>
         <Category>
-          <CategoryBox>
-            <CategotyText>
-               <Link to="/HakertonCategory">해커톤</Link>
+          <CategoryBox >
+            <CategotyText >
+            <   Link to="/HakertonCategory">해커톤</Link>
             </CategotyText> 
           </CategoryBox>
           <CategoryBox>
             <CategotyText>
-              <Link to="/ProjectCategory">프로젝트</Link>
+                <Link to="/ProjectCategory">프로젝트</Link>
             </CategotyText> 
           </CategoryBox>
-          <CategoryBox>
-            <CategotyText>
-              <Link to="/ContestCategory">공모전</Link>
+          <CategoryBox style={{
+                backgroundColor: "black",
+                color:"white",
+            }}>
+            <CategotyText style={{
+                color:"white",
+            }}>
+              공모전
             </CategotyText> 
           </CategoryBox>
         </Category>
-        <Body>
-          <AppleWatch>
-            <FisrtAppleWatchUI/>
-            <SecondAppleWatchUI/>
-            <ThirdAppleWatchUI/>
-            <FourAppleWatchUI/>
-            <FiveAppleWatchUI/>
-          </AppleWatch>
-          <Card>
-            <TextinCard>
-              <Name>
-                김성섭
-              </Name>
-              <Introduce>
-                22학번 / 모바일개발자
-              </Introduce>
-              <Text>
-                새로운 것을 즐기는 개발자 김성섭입니다.
-              </Text>
-            </TextinCard>
-            <Address>
-              https://github.com/wakathon-dont-worry-team-name/
-            </Address>
-            <Address>
-              https://notion.com/wakathon-dont-worry-team-name/
-            </Address>
-            <Click>
-              <BCard>
-                명함보기
-              </BCard>
-            </Click>
-          </Card>
-        </Body>
         <SecondBody>
-          <Title>
-            컴퓨터 공학과 학생들을 추천해주세요~
-          </Title>
+        <Title>
+            공모전에 참여해 본 사람들을 데려왔어요 🏆
+        </Title>
         <SecondBox>
           <PictureBox>
             <Picture>
@@ -396,8 +362,6 @@ function Main() {
           </PictureBox>
         </SecondBox>
       </SecondBody>
-      </>
+    </>
     );
-  }
-  
-  export default Main;
+}
