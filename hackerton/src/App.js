@@ -19,10 +19,10 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<MainPage />} />
+        <Route path="/" element={<LoginComponent />} />
+        <Route path="/main" element={<MainPage />} />
         <Route path="/Card" element={<CardComponent />} />
         <Route path="/Selcet" element={<SelcetComponent />} />
-        <Route path="/Login" element={<LoginComponent />} />
         <Route path="/Signup" element={<SignupComponent />} />
         <Route path="/HakertonCategory" element={<HakertonCategoryComponent />} />
         <Route path="/ProjectCategory" element={<ProjectCategoryComponent />} />

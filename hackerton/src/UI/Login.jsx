@@ -17,7 +17,7 @@ const LoginBox = styled.div`
   margin: auto;
   max-width: 500px;
   padding: 2rem;
-  background-color: #f4f6f9;
+  background-color: #FFFFFF;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 `;
@@ -82,6 +82,7 @@ const Logo = styled.div`
 
 const LoginText = styled.div`
     color: white;
+    
 `;
 
 const Text = styled.div`
@@ -119,43 +120,18 @@ export default function Login() {
       return;
     }
 
-    
-    try {
-      const response = await axios.post("http://localhost:8080/api/signin", {
-        memberId,
-        pwd,
-      });
+    // 입력된 아이디와 비밀번호가 "qwe"와 "123"인지 확인
+    if (memberId === "qwe" && pwd === "123") {
+      // 로그인 성공
+      console.log("로그인 성공 완료");
 
-      
-      const { httpStatus, message, responseData } = response.data;
-
-      if (httpStatus === 200) {
-        // 로그인 성공
-
-        console.log("로그인 성공:", message);
-        localStorage.setItem('cartId', null);
-        // responseData에서 userId를 확인하고 할당
-        const memberId = responseData.memberId;
-        console.log("유저 아이디는:", memberId);
-        localStorage.setItem('userId', memberId);
-        // 다른 컴포넌트에서
-        // 로컬 스토리지에서 읽기 
-        // const userId = localStorage.getItem('userId');
-
-        const { ownerId, ownerName, shopName } = responseData;
-    
-        // 토큰 등의 처리를 추가할 수 있습니다.
-        // localStorage.setItem("token", token);
-    
-        // 로그인 후 이동
-        navigate('/main');
-      } else {
-        // 로그인 실패
-        console.error("로그인 실패:", message);
-        alert(message);
-      }
-    } catch (error) {
-      console.error("로그인 오류:", error);
+      // localStorage 설정 및 페이지 이동
+      localStorage.setItem("userId", memberId);
+      navigate('/main');
+    } else {
+      // 로그인 실패
+      console.error("로그인 실패: 아이디와 비밀번호를 확인해주세요.");
+      alert("아이디와 비밀번호를 확인해주세요.");
     }
   };
   

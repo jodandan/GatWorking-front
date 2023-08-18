@@ -5,6 +5,8 @@ import QuestionItem from "./KimQuestionItem";
 import Person from "../asset/Person.png";
 import "./KimSelcet.css";
 
+import Green from "../asset/Green.png";
+
 const Header = styled.div`
   display: flex;
   margin-top: 2rem;
@@ -13,6 +15,8 @@ const Header = styled.div`
 
 const Logo = styled.div`
   margin-left: 3rem;
+  width: 18.969px;
+  height: 27.5px;
 `;
 
 const Home = styled.div`
@@ -101,7 +105,6 @@ const Card = styled.div`
 const CardImage = styled.div`
   width: 100%;
   height: 200px;
-  background-image
   border-radius: 30px 30px 0px 0px;
 `;
 
@@ -204,16 +207,16 @@ export default function Selcet() {
       <>
         <Header>
           <Logo>
-            선택페이지
+            <img src={Green}/>
           </Logo>
           <Home>
-            <Link to="/">홈</Link>
+            <Link to="/main">홈</Link>
           </Home>
           <Register>
             <Link to="/Card">명함</Link>
           </Register>
           <LoginCss>
-            <Link to="/Login">선택의 시간</Link>
+            <Link to="/Selcet">선택의 시간</Link>
           </LoginCss>
         </Header>
         <Border/>

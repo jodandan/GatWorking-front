@@ -17,6 +17,8 @@ import ThirdAppleWatchUI from "./ThirdAppleWatchUI";
 import FourAppleWatchUI from "./FourAppleWatchUI";
 import FiveAppleWatchUI from "./FiveAppleWatchUI";
 
+import Green from "../asset/Green.png";
+
 const Header = styled.div`
   display: flex;
   margin-top: 2rem;
@@ -25,6 +27,8 @@ const Header = styled.div`
 
 const Logo = styled.div`
   margin-left: 3rem;
+  width: 18.969px;
+  height: 27.5px;
 `;
 
 const Home = styled.div`
@@ -229,7 +233,7 @@ const SecondBox = styled.div`
 
 const Category = styled.div`
 display: flex;
-margin-left: 28rem;
+margin-left: 35rem;
 `;
 
 const CategoryBox = styled.div`
@@ -238,7 +242,7 @@ const CategoryBox = styled.div`
   flex-shrink: 0;
   border-radius: 15px;
   background: var(--grey-light, #F4F6F9);
-  margin-left: 5rem;
+  margin-left: 2rem;
 
 `;
 
@@ -270,10 +274,10 @@ function Main() {
         </Routes>
         <Header>
           <Logo>
-            대충 로고자리
+            <img src={Green}/>
           </Logo>
           <Home>
-            <Link to="/">홈</Link>
+            <Link to="/main">홈</Link>
           </Home>
           <Register>
             <Link to="/Card">명함</Link>

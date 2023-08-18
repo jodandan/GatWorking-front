@@ -7,6 +7,7 @@ import github from '../asset/github.png';
 import sparkles from '../asset/sparkles.png';
 import Green from '../asset/Green.png';
 
+
 const Header = styled.div`
   display: flex;
   margin-top: 2rem;
@@ -15,6 +16,8 @@ const Header = styled.div`
 
 const Logo = styled.div`
   margin-left: 3rem;
+  width: 18.969px;
+  height: 27.5px;
 `;
 
 const Home = styled.div`
@@ -332,10 +335,10 @@ export default function Card() {
     <>
       <Header>
         <Logo>
-          여기카드페이지
+          <img src={Green}/>
         </Logo>
         <Home>
-          <Link to="/"  >홈</Link>
+          <Link to="/main"  >홈</Link>
         </Home>
         <Register>
           <Link to="/Card"  >명함</Link>
