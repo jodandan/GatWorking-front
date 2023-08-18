@@ -25,12 +25,13 @@ const Logo = styled.div`
   margin-left: 3rem;
   width: 18.969px;
   height: 27.5px;
+  position: absolute;
 `;
 
 const Home = styled.div`
   color: var(--grey-point, #D2D5D9);
   font-family: Inter;
-  font-size: 20px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -44,11 +45,11 @@ const Home = styled.div`
 const Register = styled.div`
   color: var(--grey-point, #D2D5D9);
   font-family: Inter;
-  font-size: 20px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-left: 8rem;
+  margin-left: 50px;
 
   a:link { color: grey; text-decoration: none;}
   a:visited { color: grey; text-decoration: none;}
@@ -59,11 +60,11 @@ const Register = styled.div`
 const LoginCss = styled.div`
   color: var(--grey-point, #D2D5D9);
   font-family: Inter;
-  font-size: 20px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-left: 8rem;
+  margin-left: 50px;
 
   a:link { color: grey; text-decoration: none;}
   a:visited { color: grey; text-decoration: none;}
@@ -72,7 +73,6 @@ const LoginCss = styled.div`
 `;
 const Border = styled.div`
   margin-top: 1rem;
-  border-bottom:2px solid gray;
   margin-bottom: 2rem;
 `;
 
@@ -87,7 +87,6 @@ const Card = styled.div`
   border: none;
   width: 500px;
   border-radius: 30px;
-  border: 1px solid #EBEBEB;
   background: #FFF;
   box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
 `;
@@ -163,27 +162,18 @@ const BCard = styled.div`
   line-height: normal;
 `;
 
-const SecondBody = styled.div`
-  width: 94.8rem;
-  height: 32rem;
-  border: 1px solid #EBEBEB;
-  
-`;
-
 const Title = styled.div`
-  border: 1px solid #EBEBEB;
   color: var(--black-point, #27292C);
   font-family: Inter;
   font-size: 26px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  margin-left: 30px;
   margin-top: 4rem;
-  margin-left: 4rem;
 `;
 
 const Picture = styled.div`
-  border: 1px solid #EBEBEB;
   width: 240px;
   height: 177px;
   flex-shrink: 0;
@@ -191,19 +181,43 @@ const Picture = styled.div`
 `;
 
 const PictureBox = styled.div`
-  margin-left: 3rem;
-  margin-top: 3rem;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 50px;
+`;
+
+const SpaceContainer = styled.div`
+  width: 100%;
+  height: 100%;
+`;
+
+const GridBox = styled.div`
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+`;
+
+const ContentBox = styled.div`
+  width: 100%;
+  height: 100%;
+`
+
+const SecondBody = styled.div`
+  width: 94.8rem;
+  height: 32rem;
+  
 `;
 
 const SecondName = styled.div`
 
   margin-left:  1rem;
   margin-top: 2rem;
+  font-weight: bold;
+  font-size: 20px;
 `;
 
 const SecondText = styled.div`
   margin-left: 1rem;
-  margin-top: 2rem;
+  margin-top: 20px;
   color: var(--grey-thickest, #626468);
   font-family: Inter;
   font-size: 13px;
@@ -214,7 +228,7 @@ const SecondText = styled.div`
 
 const SecondIntroduce = styled.div`
   margin-left: 1rem;
-  margin-top: 1rem;
+  margin-top: 20px;
   color: var(--blue-point, #0068FF);
   font-family: Inter;
   font-size: 13px;
@@ -233,13 +247,12 @@ margin-left: 35rem;
 `;
 
 const CategoryBox = styled.div`
-  width: 99px;
-  height: 50px;
   flex-shrink: 0;
   border-radius: 15px;
   background: var(--grey-light, #F4F6F9);
-  margin-left: 2rem;
-
+  padding: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
 `;
 
 const CategotyText = styled.div`
@@ -250,7 +263,6 @@ const CategotyText = styled.div`
   font-weight: 700;
   line-height: normal;
   text-align: center;
-  margin-top: 10px;
 
   a:link { color: black; text-decoration: none;}
   a:visited { color: black; text-decoration: none;}
@@ -304,67 +316,65 @@ export default function ContestCategory() {
           </CategoryBox>
         </Category>
         <SecondBody>
-        <Title>
-            공모전에 참여해 본 사람들을 데려왔어요 🏆
-        </Title>
-        <SecondBox>
-          <PictureBox>
-            <Picture>
-              사진자리
-            </Picture>
-            <SecondName>
-              김성섭
-            </SecondName>
-            <SecondText>
-              새로운 것을 즐기는 개발자 김성섭입니다.
-            </SecondText>
-            <SecondIntroduce>
-              22학번 / 모바일개발자
-            </SecondIntroduce>
-          </PictureBox>
-          <PictureBox>
-            <Picture>
-              사진자리
-            </Picture>
-            <SecondName>
-              김성섭
-            </SecondName>
-            <SecondText>
-              새로운 것을 즐기는 개발자 김성섭입니다.
-            </SecondText>
-            <SecondIntroduce>
-              22학번 / 모바일개발자
-            </SecondIntroduce>
-          </PictureBox>
-          <PictureBox>
-            <Picture>
-              사진자리
-            </Picture>
-            <SecondName>
-              김성섭
-            </SecondName>
-            <SecondText>
-              새로운 것을 즐기는 개발자 김성섭입니다.
-            </SecondText>
-            <SecondIntroduce>
-              22학번 / 모바일개발자
-            </SecondIntroduce>
-          </PictureBox>
-          <PictureBox>
-            <Picture>
-              사진자리
-            </Picture>
-            <SecondName>
-              김성섭
-            </SecondName>
-            <SecondText>
-              새로운 것을 즐기는 개발자 김성섭입니다.
-            </SecondText>
-            <SecondIntroduce>
-              22학번 / 모바일개발자
-            </SecondIntroduce>
-          </PictureBox>
-        </SecondBox>
+        <GridBox>
+          <SpaceContainer></SpaceContainer>
+          <ContentBox>
+            <Title>
+                  공모전에 참여해 본 사람들을 데려왔어요🏆
+              </Title>
+            <SecondBox>
+                <PictureBox>
+                  <div className="person9"/>
+                  <SecondName>
+                    김성섭
+                  </SecondName>
+                  <SecondText>
+                    새로운 것을 즐기는 개발자 김성섭입니다.
+                  </SecondText>
+                  <SecondIntroduce>
+                    22학번 / 모바일개발자
+                  </SecondIntroduce>
+                </PictureBox>
+                <PictureBox>
+                  <div className="person10"/>  
+                  <SecondName>
+                    김성섭
+                  </SecondName>
+                  <SecondText>
+                    새로운 것을 즐기는 개발자 김성섭입니다.
+                  </SecondText>
+                  <SecondIntroduce>
+                    22학번 / 모바일개발자
+                  </SecondIntroduce>
+                </PictureBox>
+                <PictureBox>
+                  <div className="person11"/>
+                  <SecondName>
+                    김성섭
+                  </SecondName>
+                  <SecondText>
+                    새로운 것을 즐기는 개발자 김성섭입니다.
+                  </SecondText>
+                  <SecondIntroduce>
+                    22학번 / 모바일개발자
+                  </SecondIntroduce>
+                </PictureBox>
+                <PictureBox>
+                  <div className="person12"/>
+                  <SecondName>
+                    김성섭
+                  </SecondName>
+                  <SecondText>
+                    새로운 것을 즐기는 개발자 김성섭입니다.
+                  </SecondText>
+                  <SecondIntroduce>
+                    22학번 / 모바일개발자
+                  </SecondIntroduce>
+                </PictureBox>
+            </SecondBox>
+          </ContentBox>
+          <SpaceContainer></SpaceContainer>
+        </GridBox>
       </SecondBody>
     </>
     );

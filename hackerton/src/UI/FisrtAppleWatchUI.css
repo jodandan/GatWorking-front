@@ -10,27 +10,250 @@
 
   }
   
-  .watch-face {
+  .watch-face-1 {
     background-color: black;
     color: white;
     border-radius: 50%;
     padding: 10px;
     text-align: center;
     margin-left: 2rem;
+    background-image: url("../asset/Person.png");
+    background-size: auto 170px;
+    background-position: center;
   }
-  
-  
+
+  .watch-face-2 {
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    margin-left: 2rem;
+    background-image: url("../asset/Person1.png");
+    background-size: auto 170px;
+    background-position: center;
+  }
+
+  .watch-face-3 {
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    margin-left: 2rem;
+    background-image: url("../asset/Person2.png");
+    background-size: auto 170px;
+    background-position: center;
+  }
+
+  .watch-face-4 {
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    margin-left: 2rem;
+    background-image: url("../asset/Person3.png");
+    background-size: auto 170px;
+    background-position: center;
+  }
+
+  .watch-face-5 {
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    margin-left: 2rem;
+    background-image: url("../asset/Person4.png");
+    background-size: auto 170px;
+    background-position: center;
+  }
+
+  .watch-face-6 {
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    margin-left: 2rem;
+    background-image: url("../asset/Person5.png");
+    background-size: auto 170px;
+    background-position: center;
+  }
+
+  .watch-face-7 {
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    margin-left: 2rem;
+    background-image: url("../asset/Person6.png");
+    background-size: auto 170px;
+    background-position: center;
+  }
+
+  .watch-face-8 {
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    margin-left: 2rem;
+    background-image: url("../asset/Person7.png");
+    background-size: auto 170px;
+    background-position: center;
+  }
+
+  .watch-face-9 {
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    margin-left: 2rem;
+    background-image: url("../asset/Person8.png");
+    background-size: auto 170px;
+    background-position: center;
+  }
+
+  .watch-face-10 {
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    margin-left: 2rem;
+    background-image: url("../asset/Person9.png");
+    background-size: auto 170px;
+    background-position: center;
+  }
+
+  .watch-face-11 {
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    margin-left: 2rem;
+    background-image: url("../asset/Person10.png");
+    background-size: auto 170px;
+    background-position: center;
+  }
+
+  .watch-face-12 {
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    margin-left: 2rem;
+    background-image: url("../asset/Person11.png");
+    background-size: auto 170px;
+    background-position: center;
+  }
+
+  .watch-face-13 {
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    margin-left: 2rem;
+    background-image: url("../asset/Person12.png");
+    background-size: auto 170px;
+    background-position: center;
+  }
+
+  .watch-face-14 {
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    margin-left: 2rem;
+    background-image: url("../asset/Person13.png");
+    background-size: auto 170px;
+    background-position: center;
+  }
+
+  .watch-face-15 {
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    margin-left: 2rem;
+    background-image: url("../asset/Person14.png");
+    background-size: auto 170px;
+    background-position: center;
+  }
+
+  .watch-face-16 {
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    margin-left: 2rem;
+    background-image: url("../asset/Person15.png");
+    background-size: auto 170px;
+    background-position: center;
+  }
+
+  .watch-face-17 {
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    margin-left: 2rem;
+    background-image: url("../asset/Person16.png");
+    background-size: auto 170px;
+    background-position: center;
+  }
+
+  .watch-face-18 {
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    margin-left: 2rem;
+    background-image: url("../asset/Person17.png");
+    background-size: auto 170px;
+    background-position: center;
+  }
+
+  .watch-face-19 {
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    margin-left: 2rem;
+    background-image: url("../asset/Person18.png");
+    background-size: auto 170px;
+    background-position: center;
+  }
+
   .time {
-    font-size: 3em;
-    font-weight: bold;
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
   }
   
   .date {
-    font-size: 1.2em;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
   }
   
   .complications {
     margin-top: 10px;
+    width: 130px;
+    height: 130px;
   }
   
   .complication {
