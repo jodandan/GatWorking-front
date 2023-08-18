@@ -105,8 +105,8 @@ const Box = styled.div`
     `;
 
 export default function Login() {
-  const [nickname, setNickname] = useState("");
-  const [password, setPassword] = useState("");
+  const [memberId, setMemberId] = useState("");
+  const [pwd, setPwd] = useState("");
 
   const navigate = useNavigate(); // Initialize useNavigate
 
@@ -114,7 +114,7 @@ export default function Login() {
     e.preventDefault();
 
     // 유효성 검사: 아이디와 비밀번호가 입력되었는지 확인
-    if (!nickname || !password) {
+    if (!memberId || !pwd) {
       alert("아이디와 비밀번호를 입력해주세요.");
       return;
     }
@@ -122,8 +122,8 @@ export default function Login() {
     
     try {
       const response = await axios.post("http://localhost:8080/api/signin", {
-        ownerName: nickname,
-        password,
+        memberId,
+        pwd,
       });
 
       
@@ -135,9 +135,9 @@ export default function Login() {
         console.log("로그인 성공:", message);
         localStorage.setItem('cartId', null);
         // responseData에서 userId를 확인하고 할당
-        const userId = responseData.ownerId;
-        console.log("유저 아이디는:", userId);
-        localStorage.setItem('userId', userId);
+        const memberId = responseData.memberId;
+        console.log("유저 아이디는:", memberId);
+        localStorage.setItem('userId', memberId);
         // 다른 컴포넌트에서
         // 로컬 스토리지에서 읽기 
         // const userId = localStorage.getItem('userId');
@@ -172,9 +172,9 @@ export default function Login() {
             {/* <FormLabel htmlFor="nickname" /> */}
             <FormInput
               type="text"
-              name="nickname"
-              value={nickname}
-              onChange={(e) => setNickname(e.target.value)}
+              name="memberId"
+              value={memberId}
+              onChange={(e) => setMemberId(e.target.value)}
               required
  
             />
@@ -183,9 +183,9 @@ export default function Login() {
             </Title>
             <FormInput
               type="password"
-              name="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              name="pwd"
+              value={pwd}
+              onChange={(e) => setPwd(e.target.value)}
               required
 
             />
