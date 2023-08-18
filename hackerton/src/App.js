@@ -1,11 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled from 'styled-components';
+import { Route, Routes } from "react-router-dom"; // Import Link component
+
+import MainPage from "./Page/MainPage";
+import CardComponent from "./Page/CardComponent";
+import LoginComponent from "./Page/LoginComponent";
+
+
 
 function App() {
   return (
-    <div >
-      gd
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/Card" element={<CardComponent />} />
+        <Route path="/login" element={<LoginComponent />} />
+      </Routes> 
+   
+    </>
   );
 }
 
