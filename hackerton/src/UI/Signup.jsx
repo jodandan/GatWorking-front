@@ -8,6 +8,8 @@ import github from '../asset/github.png';
 
 import sparkles from '../asset/sparkles.png';
 import Green from '../asset/Green.png';
+import BlueCheck from '../asset/BlueCheck.png';
+import GreyCheck from '../asset/GreyCheck.png';
 
 
 
@@ -255,12 +257,148 @@ const DeleteButton = styled.div`
   
 `;
 
+const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+`;
+
+const ModalContent = styled.div`
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+`;
+
+const ModalTitle = styled.div`
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+`;
+
+const ModalInput = styled.input`
+  width: 100%;
+  height: 40px;
+  margin-bottom: 1rem;
+  padding: 5px;
+`;
+
+const ModalButton = styled.button`
+  padding: 10px 20px;
+  background-color: var(--blue-point, #0068FF);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+`;
+
+const CloseModalButton = styled.button`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+`;
+
+const CheckTitle = styled.div`
+  color: var(--black-point, #27292C);
+  text-align: center;
+  font-family: Inter;
+  font-size: 27px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 5rem;
+  margin-right: 60rem;
+
+`;
+
+const Contents = styled.div`
+  color: var(--grey-thick, #A4A5A8);
+  font-family: Inter;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 5rem;
+  margin-left: 1rem;
+
+
+`;
+
+const SecondContents = styled.div`
+  color: var(--black-point, #27292C);
+  font-family: Inter;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 1rem;
+  margin-left: 1rem;
+
+
+`;
+
+const V = styled.div`
+color: var(--black-point, #27292C);
+font-family: Inter;
+font-size: 17px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-top: 1rem;
+margin-left: 30rem;
+
+`;
+
+const ContentBox = styled.div`
+  display: flex;
+  
+
+`;
+
+const LastSubmitBtn = styled.div`
+  border-radius: 10px;
+  background: ${props => props.disabled ? '#B0B0B0' : '#0068FF'};
+  width: 269px;
+  height: 51px;
+  flex-shrink: 0;
+  color: ${props => props.disabled ? '#A4A5A8' : '#FFF'};
+  text-align: center;
+  font-family: Inter;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  cursor: ${props => props.disabled ? 'default' : 'pointer'};
+  margin-left: 40rem;
+  margin-top: 5rem;
+  line-height : 50px;
+`;
+
+
 const SignUp = () => {
   const [nickname, setNickname] = useState('');
   const [password, setPassword] = useState('');
   const [shopName, setShopName] = useState('');
   const [introductionLinks, setIntroductionLinks] = useState([]);
   const [projects, setProjects] = useState([]);
+  const [ShowProjectModal ,setShowProjectModal] = useState('');
+  const [projectName, setProjectName] = useState('');
+  const [personalRole, setPersonalRole] = useState('');
+  const [documentLink, setDocumentLink] = useState('');
+  const [termsAgreed, setTermsAgreed] = useState(false);
+  const [privacyAgreed, setPrivacyAgreed] = useState(false);
 
   const navigate = useNavigate(); // Initialize useNavigate
 
@@ -285,9 +423,23 @@ const SignUp = () => {
 
   const handleAddProject = () => {
     // Add a new project to the list
-    const newProject = prompt('Enter the project details:');
-    if (newProject) {
+    const newProject = {
+      name: projectName,
+      role: personalRole,
+      link: documentLink,
+    };
+    
+    // 새 프로젝트를 목록에 추가
+    if (newProject.name && newProject.role && newProject.link) {
       setProjects([...projects, newProject]);
+
+      // 입력 필드 초기화
+      setProjectName('');
+      setPersonalRole('');
+      setDocumentLink('');
+
+      // 모달 닫기
+      setShowProjectModal(false);
     }
   };
 
@@ -297,13 +449,15 @@ const SignUp = () => {
     setProjects(updatedProjects);
   };
 
+  const areBothTermsAgreed = () => {
+    return termsAgreed && privacyAgreed;
+  };
+
   return (
     <>
-    <LoginBox>
-    <MainTitle>회원가입</MainTitle>
-
-      <SignUpForm onSubmit={handleSignUp}>
-
+      <LoginBox>
+      <MainTitle>회원가입</MainTitle>
+      <SignUpForm>
         <LeftBox>
             <LeftTitle>
               사용자정보
@@ -322,7 +476,6 @@ const SignUp = () => {
           <FormInput
             type="text"
             name="nickname"
-            value={nickname}
             onChange={(e) => setNickname(e.target.value)}
             required
           />
@@ -333,7 +486,7 @@ const SignUp = () => {
           <FormInput
             type="text"
             name="nickname"
-            value={nickname}
+
             onChange={(e) => setNickname(e.target.value)}
             required
           />
@@ -344,7 +497,7 @@ const SignUp = () => {
           <FormInput
             type="text"
             name="nickname"
-            value={nickname}
+
             onChange={(e) => setNickname(e.target.value)}
             required
           />
@@ -355,7 +508,7 @@ const SignUp = () => {
           <FormInput
             type="text"
             name="nickname"
-            value={nickname}
+
             onChange={(e) => setNickname(e.target.value)}
             required
           />
@@ -367,7 +520,7 @@ const SignUp = () => {
           <FormInput
             type="text"
             name="nickname"
-            value={nickname}
+
             onChange={(e) => setNickname(e.target.value)}
             required
           />
@@ -384,9 +537,10 @@ const SignUp = () => {
       <UnderBox>
         <IntroduceBox>
           소개 링크
-          <PlusButton>
-            추가
-          </PlusButton>
+        
+          <PlusButton onClick={() => setShowProjectModal(true)}>
+          추가
+        </PlusButton>
           <VerySmallBox>
             <img src={Notion} />
             <NotionBox>
@@ -469,41 +623,89 @@ const SignUp = () => {
                   </VerySmallBox>
                   
                 </IntroduceBox>
-
       </UnderBox>
 
-
-
-
-      {/* <PopupBox>
-        <AddIntroductionLink onClick={handleAddIntroductionLink}>
-          Add Introduction Link
-        </AddIntroductionLink>
-        {introductionLinks.map((link, index) => (
-          <IntroductionLink key={index}>
-            {link}
-            <DeleteIntroductionLink onClick={() => handleDeleteIntroductionLink(index)}>
-              Delete
-            </DeleteIntroductionLink>
-          </IntroductionLink>
-        ))}
-      </PopupBox>
-
-       <PopupBox>
-        <AddProject onClick={handleAddProject}>
-          Add Project
-        </AddProject>
-        {projects.map((project, index) => (
-          <Project key={index}>
-            {project}
-            <DeleteProject onClick={() => handleDeleteProject(index)}>
-              Delete
-            </DeleteProject>
-          </Project>
-        ))}
-      </PopupBox> */}
-
-  </> 
+      <UnderBox>
+        <CheckTitle>
+          약관
+        </CheckTitle>
+        <ContentBox>
+        <Contents>
+          <label>
+            <input
+              type="checkbox"
+              checked={termsAgreed}
+              onChange={() => setTermsAgreed(!termsAgreed)}
+              style={{
+                backgroundImage: `url(${require('../asset/GreyCheck.png')})`,
+                backgroundSize: 'cover',
+                width: '20px',
+                height: '20px',
+                marginRight: '8px',
+              }}
+            />
+            
+              개인정보 약관을 모두 읽었고, 동의합니다.
+            
+          </label>
+        </Contents>
+        </ContentBox>
+        <SecondContents>
+          <label>
+            <input
+              type="checkbox"
+              checked={privacyAgreed}
+              onChange={() => setPrivacyAgreed(!privacyAgreed)}  
+              style={{
+                backgroundImage: `url(${require('../asset/GreyCheck.png')})`,
+                backgroundSize: 'cover',
+                width: '20px',
+                height: '20px',
+                marginRight: '8px',
+              }}         
+            />
+            
+            사용자 약관을 모두 읽었고, 동의합니다.
+            </label>
+        </SecondContents>
+      </UnderBox> 
+      <LastSubmitBtn onClick={handleSignUp} disabled={!areBothTermsAgreed()}>
+        회원가입하기
+      </LastSubmitBtn>
+      <UnderBox>
+        <PopupBox>
+        {ShowProjectModal && (
+            <ModalOverlay>
+              <ModalContent>
+                <ModalTitle>프로젝트 추가</ModalTitle>
+                <ModalInput
+                  type="text"
+                  placeholder="프로젝트 이름"
+                  value={projectName}
+                  onChange={(e) => setProjectName(e.target.value)}
+                />
+                <ModalInput
+                  type="text"
+                  placeholder="개인 역할"
+                  value={personalRole}
+                  onChange={(e) => setPersonalRole(e.target.value)}
+                />
+                <ModalInput
+                  type="text"
+                  placeholder="문서 링크"
+                  value={documentLink}
+                  onChange={(e) => setDocumentLink(e.target.value)}
+                />
+                <ModalButton onClick={handleAddProject}>추가</ModalButton>
+                <CloseModalButton onClick={() => setShowProjectModal(false)}>
+                  X
+                </CloseModalButton>
+              </ModalContent>
+            </ModalOverlay>
+          )}
+        </PopupBox>
+      </UnderBox>
+    </>
   );
 };
 
