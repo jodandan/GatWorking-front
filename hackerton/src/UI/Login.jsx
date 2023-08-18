@@ -121,7 +121,7 @@ export default function Login() {
 
     
     try {
-      const response = await axios.post("https://iki.digital:8080/api/v1/owner/login", {
+      const response = await axios.post("http://localhost:8080/api/signin", {
         ownerName: nickname,
         password,
       });
