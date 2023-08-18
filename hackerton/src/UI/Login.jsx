@@ -6,12 +6,6 @@ import { useState } from "react";
 import LoginLogo from "../asset/LoginLogo.png";
 
 
-
-
-const LoginBox = styled.div`
-  /* Add your styling here */
-`;
-
 const SignUpForm = styled.form`
   display: flex;
   flex-direction: column;
@@ -19,55 +13,67 @@ const SignUpForm = styled.form`
   /* Add your styling here */
 `;
 
-const Title = styled.form`
-    display: flex;
-    margin-top: 4rem;
-    color: var(--black-point, #27292C);
-    font-family: Inter;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+const LoginBox = styled.div`
+  margin: auto;
+  max-width: 500px;
+  padding: 2rem;
+  background-color: #f4f6f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+`;
 
+const Title = styled.h2`
+  color: #27292c;
+  font-family: Inter, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
 `;
 
 const FormInput = styled.input`
-  width: 377px;
-    height: 54px;
-    flex-shrink: 0;
-    border-radius: 15px;
-    background: var(--grey-light, #F4F6F9);
-    border: none;
-    padding-left: 20px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #d2d5d9;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
 `;
 
 const SubmitBtn = styled.button`
-    margin-top: 3rem;
-    width: 377px;
-    height: 51px;
-    flex-shrink: 0;
-    border-radius: 10px;
-    background: var(--blue-point, #0068FF);
-    border: none;
-    
-
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0068ff;
+  color: white;
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  
+  &:hover {
+    background-color: #0052cc;
+  }
 `;
 
 const Trash = styled.div`
-    margin-top: 1rem;
-    color: var(--blue-point, #0068FF);
-    text-align: center;
-    font-family: Inter;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 700;   
-    line-height: normal;
-    a:link { color: #0068FF; text-decoration: none;}
-    a:visited { color: #0068FF; text-decoration: none;}
-    a:hover { color: #0068FF; text-decoration: underline;}
-    display: inline;
-    margin-left: 1rem;
-
+  text-align: center;
+  margin-top: 1rem;
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  
+  a {
+    color: #0068ff;
+    text-decoration: none;
+    font-weight: 700;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 `;
 
 const Logo = styled.div`
@@ -142,7 +148,7 @@ export default function Login() {
         // localStorage.setItem("token", token);
     
         // 로그인 후 이동
-        navigate('/select');
+        navigate('/main');
       } else {
         // 로그인 실패
         console.error("로그인 실패:", message);
