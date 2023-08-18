@@ -4,6 +4,7 @@ import { Link ,Route, Routes } from "react-router-dom"; // Import Link component
 
 
 import CardComponent from "../Page/CardComponent";
+import LoginComponent from "../Page/SelcetComponent";
 import SelcetComponent from "../Page/SelcetComponent";
 
 import FisrtAppleWatchUI from "./FisrtAppleWatchUI";
@@ -224,6 +225,7 @@ const SecondBox = styled.div`
 
 const Category = styled.div`
 display: flex;
+margin-left: 28rem;
 `;
 
 const CategoryBox = styled.div`
@@ -232,7 +234,8 @@ const CategoryBox = styled.div`
   flex-shrink: 0;
   border-radius: 15px;
   background: var(--grey-light, #F4F6F9);
-  margin-left: 3rem;
+  margin-left: 5rem;
+
 `;
 
 const CategotyText = styled.div`
@@ -246,12 +249,12 @@ const CategotyText = styled.div`
   margin-top: 10px;
 
 `;
-
 function Main() {
     return (
       <>
         <Routes>
           <Route path="/Card" element={<CardComponent />} />
+          <Route path="/login" element={<LoginComponent />} />
           <Route path="/Selcet" element={<SelcetComponent />} />
         </Routes>
         <Header>
@@ -285,7 +288,6 @@ function Main() {
               해커톤
             </CategotyText> 
           </CategoryBox>
-
         </Category>
         <Body>
           <AppleWatch>
