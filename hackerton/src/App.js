@@ -4,7 +4,9 @@ import { Route, Routes } from "react-router-dom"; // Import Link component
 
 import MainPage from "./Page/MainPage";
 import CardComponent from "./Page/CardComponent";
+import SelcetComponent from "./Page/SelcetComponent";
 import LoginComponent from "./Page/LoginComponent";
+
 
 
 
@@ -14,7 +16,8 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/Card" element={<CardComponent />} />
-        <Route path="/login" element={<LoginComponent />} />
+        <Route path="/Selcet" element={<SelcetComponent />} />
+        <Route path="/Login" element={<LoginComponent />} />
       </Routes> 
    
     </>

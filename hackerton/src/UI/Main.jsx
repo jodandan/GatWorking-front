@@ -4,7 +4,7 @@ import { Link ,Route, Routes } from "react-router-dom"; // Import Link component
 
 
 import CardComponent from "../Page/CardComponent";
-import LoginComponent from "../Page/LoginComponent";
+import LoginComponent from "../Page/SelcetComponent";
 
 import FisrtAppleWatchUI from "./FisrtAppleWatchUI";
 import SecondAppleWatchUI from "./SecondAppleWatchUI";
@@ -29,7 +29,7 @@ const Home = styled.div`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-left: 23rem;
+  margin-left: 35rem;
 
   a:link { color: black; text-decoration: none;}
   a:visited { color: black; text-decoration: none;}
@@ -43,7 +43,7 @@ const Register = styled.div`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-left: 15rem;
+  margin-left: 8rem;
 
   a:link { color: grey; text-decoration: none;}
   a:visited { color: grey; text-decoration: none;}
@@ -58,7 +58,7 @@ const LoginCss = styled.div`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-left: 15rem;
+  margin-left: 8rem;
 
   a:link { color: grey; text-decoration: none;}
   a:visited { color: grey; text-decoration: none;}
@@ -199,7 +199,7 @@ const SecondName = styled.div`
 const SecondText = styled.div`
   margin-left: 1rem;
   margin-top: 2rem;
-  colo  r: var(--grey-thickest, #626468);
+  color: var(--grey-thickest, #626468);
   font-family: Inter;
   font-size: 13px;
   font-style: normal;
@@ -237,10 +237,10 @@ function Main() {
             <Link to="/">홈</Link>
           </Home>
           <Register>
-            <Link to="/Card">명함등록</Link>
+            <Link to="/Card">명함</Link>
           </Register>
           <LoginCss>
-            <Link to="/login">로그인</Link>
+            <Link to="/login">선택의 시간</Link>
           </LoginCss>
         </Header>
         <Border/>

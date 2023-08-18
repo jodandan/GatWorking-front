@@ -24,7 +24,7 @@ const Home = styled.div`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-left: 23rem;
+  margin-left: 35rem;
 
   a:link { color: grey; text-decoration: none;}
   a:visited { color: grey; text-decoration: none;}
@@ -38,7 +38,7 @@ const Register = styled.div`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-left: 15rem;
+  margin-left: 8rem;
 
   a:link { color: black; text-decoration: none;}
   a:visited { color: black; text-decoration: none;}
@@ -53,7 +53,7 @@ const Login = styled.div`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-left: 15rem;
+  margin-left: 8rem;
 
   a:link { color: grey; text-decoration: none;}
   a:visited { color: grey; text-decoration: none;}
@@ -341,7 +341,7 @@ export default function Card() {
           <Link to="/Card"  >명함</Link>
         </Register>
         <Login>
-          <Link to="/login"  >로그인</Link>
+          <Link to="/login"  >선택의 시간</Link>
         </Login>
       </Header>
       <Border />
