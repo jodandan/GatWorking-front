@@ -19,22 +19,24 @@ import FiveAppleWatchUI from "./FiveAppleWatchUI";
 
 import Green from "../asset/Green.png";
 
+import './KimSelcet.css';
+
 const Header = styled.div`
   display: flex;
   margin-top: 2rem;
-
 `;
 
 const Logo = styled.div`
   margin-left: 3rem;
   width: 18.969px;
   height: 27.5px;
+  position: absolute;
 `;
 
 const Home = styled.div`
   color: var(--grey-point, #D2D5D9);
   font-family: Inter;
-  font-size: 20px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -48,11 +50,11 @@ const Home = styled.div`
 const Register = styled.div`
   color: var(--grey-point, #D2D5D9);
   font-family: Inter;
-  font-size: 20px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-left: 8rem;
+  margin-left: 50px;
 
   a:link { color: grey; text-decoration: none;}
   a:visited { color: grey; text-decoration: none;}
@@ -63,11 +65,11 @@ const Register = styled.div`
 const LoginCss = styled.div`
   color: var(--grey-point, #D2D5D9);
   font-family: Inter;
-  font-size: 20px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-left: 8rem;
+  margin-left: 50px;
 
   a:link { color: grey; text-decoration: none;}
   a:visited { color: grey; text-decoration: none;}
@@ -76,7 +78,6 @@ const LoginCss = styled.div`
 `;
 const Border = styled.div`
   margin-top: 1rem;
-  border-bottom:2px solid gray;
   margin-bottom: 2rem;
 `;
 
@@ -85,86 +86,8 @@ const AppleWatch = styled.div`
   margin-left: 4rem;
 `;
 
-const Card = styled.div`
-  border: 1px solid black;
-  box-shadow: 5px 5px 5px 5px gray;
-  border: none;
-  width: 500px;
-  border-radius: 30px;
-  border: 1px solid #EBEBEB;
-  background: #FFF;
-  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
-`;
-
 const Body = styled.div`
   display: flex;
-`;
-
-const TextinCard = styled.div`
-  text-align: center;
-  
-`;
-
-const Name = styled.div`
-  margin-top: 15rem;
-  margin-right: 15rem;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-`;
-
-const Text = styled.div`
-  margin-top: 5rem;
-  color: var(--black-point, #27292C);
-  font-family: Inter;
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-`;
-
-const Introduce = styled.div`
-  margin-top: 1rem;
-  margin-right: 8rem; 
-  color: var(--blue-point, #0068FF);
-  font-family: Inter;
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-`;
-
-const Address = styled.div`
-  margin-top: 1rem;
-  margin-left: 6rem;
-  color: grey-thickest;
-  font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-`;
-
-const Click = styled.div`
-  margin-top: 5rem;
-  width:  20;
-  height: 6rem;
-  flex-shrink: 0;
-  border-radius: 0px 0px 30px 30px;
-  border: 1px solid #EBEBEB;
-  background: var(--grey-light, #F4F6F9);
-`;
-
-const BCard = styled.div`
-  margin-top: 2rem;
-  margin-left: 5rem;
-  color: var(--blue-point, #0068FF);
-  font-family: Inter;
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
 `;
 
 const SecondBody = styled.div`
@@ -175,7 +98,6 @@ const SecondBody = styled.div`
 `;
 
 const Title = styled.div`
-  border: 1px solid #EBEBEB;
   color: var(--black-point, #27292C);
   font-family: Inter;
   font-size: 26px;
@@ -183,11 +105,10 @@ const Title = styled.div`
   font-weight: 700;
   line-height: normal;
   margin-top: 4rem;
-  margin-left: 3rem;
+  margin-left: 2rem;
 `;
 
 const Picture = styled.div`
-  border: 1px solid #EBEBEB;
   width: 240px;
   height: 177px;
   flex-shrink: 0;
@@ -195,19 +116,37 @@ const Picture = styled.div`
 `;
 
 const PictureBox = styled.div`
-  margin-left: 3rem;
-  margin-top: 3rem;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 50px;
 `;
+
+const SpaceContainer = styled.div`
+  width: 100%;
+  height: 100%;
+`;
+
+const GridBox = styled.div`
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+`;
+
+const ContentBox = styled.div`
+  width: 100%;
+  height: 100%;
+`
 
 const SecondName = styled.div`
 
   margin-left:  1rem;
   margin-top: 2rem;
+  font-weight: bold;
+  font-size: 20px;
 `;
 
 const SecondText = styled.div`
   margin-left: 1rem;
-  margin-top: 2rem;
+  margin-top: 20px;
   color: var(--grey-thickest, #626468);
   font-family: Inter;
   font-size: 13px;
@@ -218,7 +157,7 @@ const SecondText = styled.div`
 
 const SecondIntroduce = styled.div`
   margin-left: 1rem;
-  margin-top: 1rem;
+  margin-top: 20px;
   color: var(--blue-point, #0068FF);
   font-family: Inter;
   font-size: 13px;
@@ -232,18 +171,17 @@ const SecondBox = styled.div`
 `;
 
 const Category = styled.div`
-display: flex;
-margin-left: 35rem;
+  display: flex;
+  margin-left: 35rem;
 `;
 
 const CategoryBox = styled.div`
-  width: 99px;
-  height: 50px;
   flex-shrink: 0;
   border-radius: 15px;
   background: var(--grey-light, #F4F6F9);
-  margin-left: 2rem;
-
+  padding: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
 `;
 
 const CategotyText = styled.div`
@@ -254,13 +192,102 @@ const CategotyText = styled.div`
   font-weight: 700;
   line-height: normal;
   text-align: center;
-  margin-top: 10px;
 
   a:link { color: black; text-decoration: none;}
   a:visited { color: black; text-decoration: none;}
   a:hover { color: black; text-decoration: underline;}
 
 `;
+
+const Card = styled.div`
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px 5px gray;
+  border: none;
+  width: 100%;
+  border-radius: 30px;
+  border: 1px solid #EBEBEB;
+  background: #FFF;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
+`;
+
+const CardImage = styled.div`
+  width: 100%;
+  height: 200px;
+  border-radius: 30px 30px 0px 0px;
+`;
+
+const TextinCard = styled.div`
+  margin-left: 30px;
+  padding: 30px 30px 0px 0px;
+`;
+
+const Name = styled.div`
+  margin-right: 15rem;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+`;
+
+const Text = styled.div`
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: var(--black-point, #27292C);
+  font-family: Inter;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+`;
+
+const Introduce = styled.div`
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: var(--blue-point, #0068FF);
+  font-family: Inter;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+`;
+
+const Address = styled.div`
+  margin-top: 10px;
+  margin-left: 30px;
+  color: grey-thickest;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  padding-right: 30px;
+`;
+
+const Click = styled.div`
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  width: 20;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  flex-shrink: 0;
+  border-radius: 15px 15px 15px 15px;
+  background: var(--grey-light, #F4F6F9);
+`;
+
+const BCard = styled.div`
+  color: var(--blue-point, #0068FF);
+  font-family: Inter;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+`;
+
 function Main() {
     return (
       <>
@@ -313,92 +340,93 @@ function Main() {
             <FiveAppleWatchUI/>
           </AppleWatch>
           <Card>
-            <TextinCard>
-              <Name>
-                김성섭
-              </Name>
-              <Introduce>
-                22학번 / 모바일개발자
-              </Introduce>
-              <Text>
-                새로운 것을 즐기는 개발자 김성섭입니다.
-              </Text>
-            </TextinCard>
-            <Address>
-              https://github.com/wakathon-dont-worry-team-name/
-            </Address>
-            <Address>
-              https://notion.com/wakathon-dont-worry-team-name/
-            </Address>
-            <Click>
-              <BCard>
-                명함보기
-              </BCard>
-            </Click>
-          </Card>
+              <div className="background-image"></div>
+              <TextinCard>
+                <Name>
+                  김성섭
+                </Name>
+                <Introduce>
+                  22학번 / 모바일개발자
+                </Introduce>
+                <Text>
+                  새로운 것을 즐기는 개발자 김성섭입니다.
+                </Text>
+              </TextinCard>
+                <Address>
+                  <div className="icon-github"></div>
+                  <div className="address">https://github.com/wakathon-dont-worry-team-name/</div>
+                </Address>
+                <Address>
+                  <div className="icon-notion"></div>
+                  <div className="address">https://notion.com/wakathon-dont-worry-team-name/</div>
+                </Address>
+                <Click>
+                  <BCard>
+                    명함보기
+                  </BCard>
+                </Click>
+              </Card>
         </Body>
         <SecondBody>
-          <Title>
-            컴퓨터 공학과 학생들을 추천해주세요~
-          </Title>
-        <SecondBox>
-          <PictureBox>
-            <Picture>
-              사진자리
-            </Picture>
-            <SecondName>
-              김성섭
-            </SecondName>
-            <SecondText>
-              새로운 것을 즐기는 개발자 김성섭입니다.
-            </SecondText>
-            <SecondIntroduce>
-              22학번 / 모바일개발자
-            </SecondIntroduce>
-          </PictureBox>
-          <PictureBox>
-            <Picture>
-              사진자리
-            </Picture>
-            <SecondName>
-              김성섭
-            </SecondName>
-            <SecondText>
-              새로운 것을 즐기는 개발자 김성섭입니다.
-            </SecondText>
-            <SecondIntroduce>
-              22학번 / 모바일개발자
-            </SecondIntroduce>
-          </PictureBox>
-          <PictureBox>
-            <Picture>
-              사진자리
-            </Picture>
-            <SecondName>
-              김성섭
-            </SecondName>
-            <SecondText>
-              새로운 것을 즐기는 개발자 김성섭입니다.
-            </SecondText>
-            <SecondIntroduce>
-              22학번 / 모바일개발자
-            </SecondIntroduce>
-          </PictureBox>
-          <PictureBox>
-            <Picture>
-              사진자리
-            </Picture>
-            <SecondName>
-              김성섭
-            </SecondName>
-            <SecondText>
-              새로운 것을 즐기는 개발자 김성섭입니다.
-            </SecondText>
-            <SecondIntroduce>
-              22학번 / 모바일개발자
-            </SecondIntroduce>
-          </PictureBox>
-        </SecondBox>
+        <GridBox>
+          <SpaceContainer></SpaceContainer>
+          <ContentBox>
+            <Title>
+                  컴퓨터공학과 재학생을 추천해드릴게요 🖥️
+              </Title>
+            <SecondBox>
+                <PictureBox>
+                  <div className="person1"/>
+                  <SecondName>
+                    김성섭
+                  </SecondName>
+                  <SecondText>
+                    새로운 것을 즐기는 개발자 김성섭입니다.
+                  </SecondText>
+                  <SecondIntroduce>
+                    22학번 / 모바일개발자
+                  </SecondIntroduce>
+                </PictureBox>
+                <PictureBox>
+                  <div className="person2"/>  
+                  <SecondName>
+                    김성섭
+                  </SecondName>
+                  <SecondText>
+                    새로운 것을 즐기는 개발자 김성섭입니다.
+                  </SecondText>
+                  <SecondIntroduce>
+                    22학번 / 모바일개발자
+                  </SecondIntroduce>
+                </PictureBox>
+                <PictureBox>
+                  <div className="person3"/>
+                  <SecondName>
+                    김성섭
+                  </SecondName>
+                  <SecondText>
+                    새로운 것을 즐기는 개발자 김성섭입니다.
+                  </SecondText>
+                  <SecondIntroduce>
+                    22학번 / 모바일개발자
+                  </SecondIntroduce>
+                </PictureBox>
+                <PictureBox>
+                  <div className="person4"/>
+                  <SecondName>
+                    김성섭
+                  </SecondName>
+                  <SecondText>
+                    새로운 것을 즐기는 개발자 김성섭입니다.
+                  </SecondText>
+                  <SecondIntroduce>
+                    22학번 / 모바일개발자
+                  </SecondIntroduce>
+                </PictureBox>
+            </SecondBox>
+          </ContentBox>
+          <SpaceContainer></SpaceContainer>
+        </GridBox>
       </SecondBody>
       </>
     );

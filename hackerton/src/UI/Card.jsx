@@ -7,6 +7,8 @@ import github from '../asset/github.png';
 import sparkles from '../asset/sparkles.png';
 import Green from '../asset/Green.png';
 
+import './Card.css';
+
 
 const Header = styled.div`
   display: flex;
@@ -15,6 +17,7 @@ const Header = styled.div`
 `;
 
 const Logo = styled.div`
+  position: absolute;
   margin-left: 3rem;
   width: 18.969px;
   height: 27.5px;
@@ -23,7 +26,7 @@ const Logo = styled.div`
 const Home = styled.div`
   color: var(--grey-point, #D2D5D9);
   font-family: Inter;
-  font-size: 20px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -37,11 +40,11 @@ const Home = styled.div`
 const Register = styled.div`
   color: var(--grey-point, #D2D5D9);
   font-family: Inter;
-  font-size: 20px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-left: 8rem;
+  margin-left: 50px;
 
   a:link { color: black; text-decoration: none;}
   a:visited { color: black; text-decoration: none;}
@@ -52,11 +55,11 @@ const Register = styled.div`
 const Login = styled.div`
   color: var(--grey-point, #D2D5D9);
   font-family: Inter;
-  font-size: 20px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-left: 8rem;
+  margin-left: 50px;
 
   a:link { color: grey; text-decoration: none;}
   a:visited { color: grey; text-decoration: none;}
@@ -65,14 +68,12 @@ const Login = styled.div`
 `;
 const Border = styled.div`
   margin-top: 1rem;
-  border-bottom:2px solid gray;
   margin-bottom: 2rem;
 `;
 
 const SecondBody = styled.div`
   width: 94.8rem;
   height: 32rem;
-  border: 1px solid #EBEBEB;
   margin-left: 1rem;
   
 `;
@@ -90,18 +91,32 @@ const Title = styled.div`
 `;
 
 const Picture = styled.div`
-  border-radius: 20px;
-  border: 1px solid #EBEBEB;
-  width: 330px;
+  width: 240px;
   height: 177px;
   flex-shrink: 0;
   margin-left: 1rem;
 `;
 
 const PictureBox = styled.div`
-  margin-left: 3rem;
-  margin-top: 3rem;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 50px;
 `;
+
+const SpaceContainer = styled.div`
+  width: 100%;
+  height: 100%;
+`;
+
+const GridBox = styled.div`
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+`;
+
+const ContentBox = styled.div`
+  width: 100%;
+  height: 100%;
+`
 
 const SecondName = styled.div`
 
@@ -171,12 +186,6 @@ const ModalContent = styled.div`
 
 
 const SmallPictureBox = styled.div`
-  border-radius: 20px;
-  border: 1px solid #EBEBEB;
-  width: 300px;
-  height: 177px;
-  flex-shrink: 0;
-  margin-left: 1rem;
 `;
 
 const SmallNameBox = styled.div`
@@ -353,9 +362,7 @@ export default function Card() {
           {profiles.map((profile, index) => (
             <PictureBox key={index} onClick={() => openModal(profile)}>
               <PictureBox>
-                <Picture>
-                  사진자리
-                </Picture>
+                <div className="person4"/>
                 <SecondName>
                   김성섭
                 </SecondName>
@@ -380,9 +387,7 @@ export default function Card() {
           {profiles.map((profile, index) => (
             <PictureBox key={index} onClick={() => openModal(profile)}>
               <PictureBox>
-                <Picture>
-                  사진자리
-                </Picture>
+              <div className="person7"/>
                 <SecondName>
                   김성섭
                 </SecondName>
@@ -407,9 +412,7 @@ export default function Card() {
           {profiles.map((profile, index) => (
             <PictureBox key={index} onClick={() => openModal(profile)}>
               <PictureBox>
-                <Picture>
-                  사진자리
-                </Picture>
+              <div className="person6"/>
                 <SecondName>
                   김성섭
                 </SecondName>
@@ -437,7 +440,7 @@ export default function Card() {
           <ModalContent>
             <PopupBox>
               <LeftBox>
-                <SmallPictureBox>사진자리</SmallPictureBox>
+                <div className='cardImage'/>
                 <SmallNameBox>{selectedProfile.name}</SmallNameBox>
                 <SmallIntroduceBox>{selectedProfile.school}</SmallIntroduceBox>
                 <SmallTextBox>{selectedProfile.introduction}</SmallTextBox>

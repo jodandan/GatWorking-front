@@ -7,53 +7,47 @@ export const AppleWatchUI = () => {
   return (
   <div className="apple-header">
     <div className="apple-watch">
-      <div className="watch-face">
+      <div className="watch-face-15">
         {/* Display the time and date */}
-        <div className="time">12</div>
+        <div className="time"></div>
 
 
       </div>
 
-      <div className="watch-face">
+      <div className="watch-face-16">
         {/* Display the time and date */}
-        <div className="time">12:34</div>
-        <div className="date">August 18</div>
 
         {/* Complications */}
         <div className="complications">
-          <div className="complication weather">☀️ 75°F</div>
+          <div className="complication weather"></div>
 
         </div>
       </div>
 
-      <div className="watch-face">
+      <div className="watch-face-17">
         {/* Display the time and date */}
-        <div className="time">12:34</div>
-        <div className="date">August 18</div>
 
         {/* Complications */}
         <div className="complications">
-          <div className="complication weather">☀️ 75°F</div>
+          <div className="complication weather"></div>
 
         </div>
       </div>
 
-      <div className="watch-face">
+      <div className="watch-face-18">
         {/* Display the time and date */}
-        <div className="time">12:34</div>
-        <div className="date">August 18</div>
 
         {/* Complications */}
         <div className="complications">
-          <div className="complication weather">☀️ 75°F</div>
+          <div className="complication weather"></div>
 
         </div>
       </div>
 
 
-      <div className="watch-face">
+      <div className="watch-face-19">
         {/* Display the time and date */}
-        <div className="time">12</div>
+        <div className="time"></div>
 
       </div>
     </div>

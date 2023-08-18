@@ -17,12 +17,13 @@ const Logo = styled.div`
   margin-left: 3rem;
   width: 18.969px;
   height: 27.5px;
+  position: absolute;
 `;
 
 const Home = styled.div`
   color: var(--grey-point, #D2D5D9);
   font-family: Inter;
-  font-size: 20px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -36,11 +37,11 @@ const Home = styled.div`
 const Register = styled.div`
   color: var(--grey-point, #D2D5D9);
   font-family: Inter;
-  font-size: 20px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-left: 8rem;
+  margin-left: 50px;
 
   a:link { color: grey; text-decoration: none;}
   a:visited { color: grey; text-decoration: none;}
@@ -51,11 +52,11 @@ const Register = styled.div`
 const LoginCss = styled.div`
   color: var(--grey-point, #D2D5D9);
   font-family: Inter;
-  font-size: 20px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-left: 8rem;
+  margin-left: 50px;
 
   a:link { color: black; text-decoration: none;}
   a:visited { color: black; text-decoration: none;}
@@ -64,7 +65,6 @@ const LoginCss = styled.div`
 `;
 const Border = styled.div`
   margin-top: 1rem;
-  border-bottom:2px solid gray;
   margin-bottom: 2rem;
 `;
 
