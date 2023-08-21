@@ -1,4 +1,4 @@
-![image](https://github.com/jodandan/GatWorking-front/assets/113495894/32d9adca-d6e3-471c-8fa4-f85b82e5360e)<div align="center"> 
+<div align="center"> 
   
 프로젝트명
 ==========
@@ -38,4 +38,28 @@ ________________________
 ![image](https://github.com/jodandan/GatWorking-front/assets/113495894/5803ff41-b115-448a-8aa3-0594e9e38889)
 해당 명함을 클릭 할 시 자세한 정보가 나타나며, 다른 사람들의 포트폴리오,작업물을 구경할 수 있도록 구현해보았습니다.
 
+
+<br></br>
+________________________
+<br></br>
+
+선택의 시간 카테고리UI 
+======================
+![image](https://github.com/jodandan/GatWorking-front/assets/113495894/fab68dda-a293-494a-847c-cf6082772569)
+랜덤의 명함이 나타나게 되고, 제3자가 질문에 따라 점수를 부여할 수 있는 구조로 제작하였습니다.
+게임스러운 요소를 더해 사람들이 메인화면에 본인의 명함이 나타날 수 있도록 열심히 활동하는 것을 기대 하는 바이고,
+가끔은 엉뚱한 질문을 추가하여 사용자의 재미를 유도할 수 있도록 기획하였습니다.
+
+<br></br>
+________________________
+<br></br>
+
+
+하고싶은 말 
+----------
+
+이 프로젝트는 해커톤에서 진행한 프로젝트입니다.<br>
+Front작업은 마무리가 됐으나, Back작업이 안되서 UI만 있는 상태입니다. <br>
+
+Front 작업 : https://github.com/jodandan
 </div>
